@@ -4,13 +4,13 @@ import agency.tango.materialintroscreen.SlideFragment
 
 interface IntroContract {
 
-    interface IntroPresenterInterface {
+    interface Presenter {
 
         fun prepareSlides()
 
     }
 
-    interface IntroViewInterface {
+    interface View {
 
         fun addSlidesFragments(fragments: List<SlideFragment>)
 
