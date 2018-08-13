@@ -33,6 +33,6 @@ dependencies {
     libs.kotlinRelated.each { implementation it }
     libs.mobileUIRelated.each { implementation it }
     libs.unitTestingJavaOnlyRelated.each { testImplementation it }
-    libs.unitTestingAndroidRelated.each { androidTestImplementation it }
+    libs.androidTestingRelated.each { androidTestImplementation it }
 
 }
