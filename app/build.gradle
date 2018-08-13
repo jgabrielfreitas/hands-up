@@ -34,5 +34,6 @@ dependencies {
     libs.mobileUIRelated.each { implementation it }
     libs.unitTestingJavaOnlyRelated.each { testImplementation it }
     libs.androidTestingRelated.each { androidTestImplementation it }
+    implementation libs.appIntro
 
 }
