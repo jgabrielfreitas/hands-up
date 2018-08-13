@@ -35,5 +35,6 @@ dependencies {
     libs.unitTestingJavaOnlyRelated.each { testImplementation it }
     libs.androidTestingRelated.each { androidTestImplementation it }
     implementation libs.appIntro
+    implementation project(':core')
 
 }
