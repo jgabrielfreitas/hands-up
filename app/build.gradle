@@ -1,8 +1,7 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
 
@@ -35,6 +34,8 @@ dependencies {
     libs.unitTestingJavaOnlyRelated.each { testImplementation it }
     libs.androidTestingRelated.each { androidTestImplementation it }
     implementation libs.appIntro
+    implementation libs.dagger
+    kapt libs.daggerCompiler
     implementation project(':core')
 
 }

@@ -38,6 +38,9 @@ ext {
     roomRxJava2 = "android.arch.persistence.room:rxjava2:${roomVersion}"
     roomCompiler = "android.arch.persistence.room:compiler:${roomVersion}"
     appIntro = "agency.tango.android:material-intro-screen:${appIntroVersion}"
+    dagger = "com.google.dagger:dagger:${daggerVersion}"
+    daggerCompiler = "com.google.dagger:dagger-compiler:${daggerVersion}"
+
 
     kotlin = [
             kotlin: "org.jetbrains.kotlin:kotlin-stdlib-jre7:${kotlinVersion}"
