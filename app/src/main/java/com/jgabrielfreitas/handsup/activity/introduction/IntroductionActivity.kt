@@ -4,10 +4,12 @@ import com.jgabrielfreitas.handsup.activity.introduction.IntroContract.*
 import agency.tango.materialintroscreen.MaterialIntroActivity
 import agency.tango.materialintroscreen.SlideFragment
 import android.os.Bundle
+import javax.inject.Inject
 
-class IntroActivity : MaterialIntroActivity(), IntroViewInterface {
+class IntroductionActivity : MaterialIntroActivity(), View {
 
-    lateinit var presenter: IntroPresenterInterface
+    @Inject
+    private lateinit var presenter: Presenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
