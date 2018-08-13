@@ -21,7 +21,7 @@ ext {
     roomVersion = '1.0.0'
     hawkVersion = '2.0.1'
     daggerVersion = '2.16'
-    appIntroVersion = 'v4.2.3'
+    appIntroVersion = '0.0.5'
 
     // Testing
     jUnitVersion = '4.12'
@@ -37,7 +37,7 @@ ext {
     room = "android.arch.persistence.room:runtime:${roomVersion}"
     roomRxJava2 = "android.arch.persistence.room:rxjava2:${roomVersion}"
     roomCompiler = "android.arch.persistence.room:compiler:${roomVersion}"
-    appIntro = "com.github.apl-devs:appintro:${appIntroVersion}"
+    appIntro = "agency.tango.android:material-intro-screen:${appIntroVersion}"
 
     kotlin = [
             kotlin: "org.jetbrains.kotlin:kotlin-stdlib-jre7:${kotlinVersion}"

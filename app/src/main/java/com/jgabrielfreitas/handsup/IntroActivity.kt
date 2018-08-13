@@ -1,9 +1,10 @@
 package com.jgabrielfreitas.handsup
 
+import agency.tango.materialintroscreen.MaterialIntroActivity
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 
-class IntroActivity : AppCompatActivity() {
+class IntroActivity : MaterialIntroActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
