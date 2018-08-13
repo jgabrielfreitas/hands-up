@@ -1,0 +1,32 @@
+apply plugin: 'com.android.feature'
+
+android {
+
+    def androidConfig = rootProject.ext
+    compileSdkVersion androidConfig["compileSDK"]
+    baseFeature true
+
+    defaultConfig {
+        minSdkVersion androidConfig["minSDK"]
+        targetSdkVersion androidConfig["targetSDK"]
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':domain')
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
