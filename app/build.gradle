@@ -22,13 +22,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kapt {
+        generateStubs = true
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     def libs = rootProject.ext
-
     libs.kotlinRelated.each { implementation it }
     libs.mobileUIRelated.each { implementation it }
     libs.unitTestingJavaOnlyRelated.each { testImplementation it }
@@ -37,5 +42,4 @@ dependencies {
     implementation libs.dagger
     kapt libs.daggerCompiler
     implementation project(':core')
-
 }
