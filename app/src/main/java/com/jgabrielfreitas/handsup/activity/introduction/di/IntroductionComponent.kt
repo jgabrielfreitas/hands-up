@@ -5,7 +5,7 @@ import com.jgabrielfreitas.handsup.activity.introduction.IntroductionActivity
 import dagger.Component
 
 @Component(modules = arrayOf(IntroPresenterModule::class))
-interface IntroComponent {
+interface IntroductionComponent {
 
     fun inject(introductionActivity: IntroductionActivity)
 

@@ -1,17 +1,18 @@
 package com.jgabrielfreitas.handsup.activity.introduction.di
 
+import agency.tango.materialintroscreen.SlideFragment
 import com.jgabrielfreitas.handsup.activity.introduction.IntroContract
 import com.jgabrielfreitas.handsup.activity.introduction.IntroPresenter
+import com.jgabrielfreitas.handsup.base.BaseContract
 import dagger.Module
 import dagger.Provides
-import javax.inject.Singleton
 
 @Module
-class IntroPresenterModule(val view: IntroContract.View) {
+class IntroPresenterModule(val view: IntroContract.View, val slides: MutableList<SlideFragment>) {
 
     @Provides
-    fun providePresenter(): IntroContract.Presenter {
-        return IntroPresenter(this.view)
+    fun providePresenter(): BaseContract.Presenter {
+        return IntroPresenter(this.view, slides)
     }
 
 }
