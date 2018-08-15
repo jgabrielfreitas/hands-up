@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">HandsUp</string>
+    <string name="welcome_title">Bem vindo</string>
+    <string name="welcome_description">O HandUp é um aplicativo para lhe manter informado sobre a violência no Rio de Janeiro!</string>
+    <string name="ask_permission_title">Localização</string>
+    <string name="ask_permission_description">Vamos precisar da sua localização para continuar</string>
+    <string name="grant_permissions">CONFIRMAR</string>
 </resources>
