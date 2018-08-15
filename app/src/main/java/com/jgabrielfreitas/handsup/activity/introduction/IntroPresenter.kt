@@ -1,29 +1,15 @@
 package com.jgabrielfreitas.handsup.activity.introduction
 
 import agency.tango.materialintroscreen.SlideFragment
-import agency.tango.materialintroscreen.SlideFragmentBuilder
-import android.Manifest.permission.ACCESS_FINE_LOCATION
-import com.jgabrielfreitas.handsup.R
-import javax.inject.Inject
+import android.os.Bundle
+import com.jgabrielfreitas.handsup.base.PresenterImpl
 
-class IntroPresenter @Inject constructor(val view: IntroContract.View) : IntroContract.Presenter {
+class IntroPresenter constructor(val view: IntroContract.View,
+                                 val slides: MutableList<SlideFragment>) : PresenterImpl() {
 
-    fun getSlides(): List<SlideFragment> {
-
-        val slideFragmentsList = mutableListOf<SlideFragment>()
-
-        val helloSlideFragment = SlideFragmentBuilder().also {
-            it.backgroundColor(R.color.introHelloFragment)
-            it.title("Hello")
-            it.description("Description 1")
-            it.neededPermissions(arrayOf(ACCESS_FINE_LOCATION))
-        }.build()
-        slideFragmentsList.add(helloSlideFragment)
-
-        return slideFragmentsList
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        view.addSlidesFragments(slides)
     }
 
-    override fun prepareSlides() {
-        view.addSlidesFragments(getSlides())
-    }
 }
